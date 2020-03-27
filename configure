@@ -779,8 +779,6 @@ with_gnu_ld
 with_sysroot
 enable_libtool_lock
 with_xmlwf
-with_examples
-with_tests
 with_libbsd
 with_getrandom
 with_sys_getrandom
@@ -1461,8 +1459,6 @@ Optional Packages:
   --with-sysroot[=DIR]    Search for dependent libraries within DIR (or the
                           compiler's sysroot if not specified).
   --without-xmlwf         do not build xmlwf
-  --without-examples      do not build examples [default=included]
-  --without-tests         do not build tests [default=included]
   --with-libbsd           utilize libbsd (for arc4random_buf)
   --with-getrandom        enforce the use of getrandom function in the system
                           [default=check]
@@ -18635,16 +18631,7 @@ else
 fi
 
 
-
-# Check whether --with-examples was given.
-if test ${with_examples+y}
-then :
-  withval=$with_examples;
-else
-  with_examples=yes
-fi
-
- if test x${with_examples} = xyes; then
+ if false; then
   WITH_EXAMPLES_TRUE=
   WITH_EXAMPLES_FALSE='#'
 else
@@ -18653,16 +18640,7 @@ else
 fi
 
 
-
-# Check whether --with-tests was given.
-if test ${with_tests+y}
-then :
-  withval=$with_tests;
-else
-  with_tests=yes
-fi
-
- if test x${with_tests} = xyes; then
+ if false; then
   WITH_TESTS_TRUE=
   WITH_TESTS_FALSE='#'
 else
@@ -19269,7 +19247,7 @@ fi
 EXPAT_TARGET="$PACKAGE_NAME"
 
 
-ac_config_files="$ac_config_files Makefile expat.pc doc/Makefile examples/Makefile lib/Makefile tests/Makefile tests/benchmark/Makefile xmlwf/Makefile"
+ac_config_files="$ac_config_files Makefile expat.pc lib/Makefile xmlwf/Makefile"
 
 ac_config_files="$ac_config_files run.sh"
 
@@ -20399,11 +20377,7 @@ do
     "libtool") CONFIG_COMMANDS="$CONFIG_COMMANDS libtool" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "expat.pc") CONFIG_FILES="$CONFIG_FILES expat.pc" ;;
-    "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
-    "examples/Makefile") CONFIG_FILES="$CONFIG_FILES examples/Makefile" ;;
     "lib/Makefile") CONFIG_FILES="$CONFIG_FILES lib/Makefile" ;;
-    "tests/Makefile") CONFIG_FILES="$CONFIG_FILES tests/Makefile" ;;
-    "tests/benchmark/Makefile") CONFIG_FILES="$CONFIG_FILES tests/benchmark/Makefile" ;;
     "xmlwf/Makefile") CONFIG_FILES="$CONFIG_FILES xmlwf/Makefile" ;;
     "run.sh") CONFIG_FILES="$CONFIG_FILES run.sh" ;;
 

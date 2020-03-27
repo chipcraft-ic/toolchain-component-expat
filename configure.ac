@@ -131,17 +131,9 @@ AC_ARG_WITH([xmlwf],
   [with_xmlwf=yes])
 AM_CONDITIONAL([WITH_XMLWF], [test x${with_xmlwf} = xyes])
 
-AC_ARG_WITH([examples],
-  [AS_HELP_STRING([--without-examples], [do not build examples @<:@default=included@:>@])],
-  [],
-  [with_examples=yes])
-AM_CONDITIONAL([WITH_EXAMPLES], [test x${with_examples} = xyes])
+AM_CONDITIONAL([WITH_EXAMPLES], [false])
 
-AC_ARG_WITH([tests],
-  [AS_HELP_STRING([--without-tests], [do not build tests @<:@default=included@:>@])],
-  [],
-  [with_tests=yes])
-AM_CONDITIONAL([WITH_TESTS], [test x${with_tests} = xyes])
+AM_CONDITIONAL([WITH_TESTS], [false])
 
 
 AS_VAR_SET([EXPATCFG_ON_MINGW],[no])
@@ -320,11 +312,7 @@ AC_SUBST(EXPAT_TARGET, ["$PACKAGE_NAME"])
 
 AC_CONFIG_FILES([Makefile]
   [expat.pc]
-  [doc/Makefile]
-  [examples/Makefile]
   [lib/Makefile]
-  [tests/Makefile]
-  [tests/benchmark/Makefile]
   [xmlwf/Makefile])
 AC_CONFIG_FILES([run.sh], [chmod +x run.sh])
 AC_OUTPUT
