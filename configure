@@ -637,7 +637,6 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
-_EXPAT_OUTPUT_NAME
 AM_LDFLAGS
 AM_CXXFLAGS
 AM_CFLAGS
@@ -3259,13 +3258,13 @@ _ACEOF
 
 # Some tools Automake needs.
 
-ACLOCAL=${ACLOCAL-"${am_missing_run}aclocal-${am__api_version}"}
+ACLOCAL=${ACLOCAL-"${am_missing_run}aclocal"}
 
 
 AUTOCONF=${AUTOCONF-"${am_missing_run}autoconf"}
 
 
-AUTOMAKE=${AUTOMAKE-"${am_missing_run}automake-${am__api_version}"}
+AUTOMAKE=${AUTOMAKE-"${am_missing_run}automake"}
 
 
 AUTOHEADER=${AUTOHEADER-"${am_missing_run}autoheader"}
@@ -18579,9 +18578,6 @@ _ACEOF
 
 
 
-
-
-_EXPAT_OUTPUT_NAME="$PACKAGE_NAME"
 
 
 case "${host_os}" in #(

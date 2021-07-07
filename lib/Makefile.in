@@ -339,7 +339,6 @@ SO_MINOR = @SO_MINOR@
 SO_PATCH = @SO_PATCH@
 STRIP = @STRIP@
 VERSION = @VERSION@
-_EXPAT_OUTPUT_NAME = @_EXPAT_OUTPUT_NAME@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
